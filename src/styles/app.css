@@ -1,0 +1,28 @@
+body {
+  background-color: #f7f7f7;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.content-container {
+  width: 350px;
+  min-height: 250px;
+  background-color: #fff;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.app-header .title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.app-header {
+  padding: 8px;
+}
