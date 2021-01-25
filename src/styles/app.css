@@ -26,3 +26,62 @@ body {
 .app-header {
   padding: 8px;
 }
+
+.list-header,
+.list-not-available {
+  padding: 4px 10px 10px 10px;
+}
+
+.list-header .title {
+  font-size: 21px;
+  color: #29aed6;
+  padding: 12px 0;
+}
+
+.list-item {
+  padding: 8px;
+  border-top: 1px solid gainsboro;
+}
+
+.list-item p {
+  padding: 4px 0;
+}
+
+.list-item .title {
+  padding: 8px 0 12px;
+}
+
+.list-item a,
+.list-wrapper a {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0 10px 0;
+  text-decoration: none;
+  color: #29aed6;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.example-details .rating {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0 10px 0;
+}
+
+.example-details .title {
+  font-weight: bold;
+  padding: 8px 0 12px;
+}
+
+.example-details {
+  padding: 4px 10px 10px 10px;
+}
+
+.example-details .description-box {
+  padding: 12px 0;
+  border-top: 1px solid gainsboro;
+}
+
+.example-details p {
+  line-height: 22px;
+}
