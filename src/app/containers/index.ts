@@ -1,4 +1,5 @@
-export * from 'app/containers/Examples';
+export * from 'app/containers/AvailableExamples';
+export * from 'app/containers/ExampleDetails';
 
 // # Container Components
 
