@@ -10,7 +10,7 @@ export interface Iexample {
   id: string;
   title: string;
   description: string;
-  activeTab: string;
+  activeTab?: string;
 }
 
 export interface ItabContent {
