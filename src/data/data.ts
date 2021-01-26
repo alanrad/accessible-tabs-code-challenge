@@ -4,7 +4,8 @@ export const data = {
     {
       id: 'multiple-tab-groups',
       title: 'Multiple Tab Groups',
-      description: 'Handle multiple tab groups rendered on a single page.',
+      description:
+        'Tabs with "Automatic Activation" and handle multiple tab groups rendered on a single page.',
       activeTab: 'react',
     },
     {
