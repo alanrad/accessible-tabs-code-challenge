@@ -45,6 +45,7 @@ body {
 
 .list-item p {
   padding: 4px 0;
+  line-height: 1.5rem;
 }
 
 .list-item .title {
@@ -85,4 +86,18 @@ body {
 
 .example-details p {
   line-height: 22px;
+}
+
+.example-title {
+  margin: 2rem 0;
+}
+
+a:visited {
+  color: #29aed6;
+}
+
+a[href] {
+  color: #29aed6;
+  text-decoration: none;
+  padding: 10px 0;
 }
