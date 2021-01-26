@@ -5,6 +5,9 @@ export * from 'app/components/List';
 export * from 'app/components/ListItem';
 export * from 'app/components/ListNotAvailable';
 export * from 'app/components/DisplayDetails';
+export * from 'app/components/TabGroup';
+export * from 'app/components/Tab';
+export * from 'app/components/TabPanel';
 
 // # View Components
 
