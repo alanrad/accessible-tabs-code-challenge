@@ -35,7 +35,7 @@ body {
 .list-header .title {
   font-size: 21px;
   color: #29aed6;
-  padding: 12px 0;
+  padding: 12px 0 0;
 }
 
 .list-item {
@@ -55,7 +55,8 @@ body {
 .list-wrapper a {
   display: flex;
   justify-content: flex-end;
-  padding: 20px 0 10px 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #29aed6;
   font-weight: bold;
