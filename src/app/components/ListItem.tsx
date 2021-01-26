@@ -11,7 +11,6 @@ interface IlistItem {
 
 export const ListItem: FC<IlistItem> = ({ item }) => {
   const viewMoreLabel = 'View More';
-  // details mapping
   const { id, title, description, activeTab } = item;
 
   return (
