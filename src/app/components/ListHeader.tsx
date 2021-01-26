@@ -6,6 +6,6 @@ interface IlistHeader {
 
 export const ListHeader: FC<IlistHeader> = ({ title }) => (
   <div className="list-header">
-    <h2 className="title">{title}</h2>
+    <h1 className="title">{title}</h1>
   </div>
 );
