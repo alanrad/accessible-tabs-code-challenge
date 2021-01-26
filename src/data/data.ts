@@ -10,7 +10,8 @@ export const data = {
     {
       id: 'link-to-active-tab',
       title: 'Link to Active Tab',
-      description: 'Directly link to any given tab on a page.',
+      description:
+        'Directly link to any given tab on a page, retain active tab state with back/forward browser navigation and refresh.',
       activeTab: 'react',
     },
   ],
