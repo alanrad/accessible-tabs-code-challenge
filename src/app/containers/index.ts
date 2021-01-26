@@ -1,5 +1,7 @@
 export * from 'app/containers/AvailableExamples';
 export * from 'app/containers/ExampleDetails';
+export * from 'app/containers/DemoSingleTabGroup';
+export * from 'app/containers/DemoMultipleTabGroup';
 
 // # Container Components
 
