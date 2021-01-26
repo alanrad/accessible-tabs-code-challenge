@@ -10,12 +10,12 @@ interface IlistItem {
 }
 
 export const ListItem: FC<IlistItem> = ({ item }) => {
-  const viewMoreLabel = 'View More';
-  const { id, title, description, activeTab } = item;
+  const viewMoreLabel = 'View »';
+  const { id, title, description, activeTab = '' } = item;
 
   return (
     <div className="list-item">
-      <h3 className="title">{title}</h3>
+      <h2 className="title">{title}</h2>
       <p>{description}</p>
       <Link to={exampleLink(id, activeTab)}>{viewMoreLabel}</Link>
     </div>
