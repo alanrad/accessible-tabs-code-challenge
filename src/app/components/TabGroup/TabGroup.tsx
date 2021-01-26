@@ -9,22 +9,26 @@ import './tabgroup.css';
 interface ItabGroup {
   label: string;
   tabs: ItabContent[];
-  activeTab: string;
+  activeTab?: string;
+  onTabSelected?: (newTabId: string) => void;
 }
 
-export const TabGroup: FC<ItabGroup> = ({ label, tabs, activeTab }) => {
+export const TabGroup: FC<ItabGroup> = ({
+  label,
+  tabs,
+  activeTab = '',
+  onTabSelected,
+}) => {
   const tabIds: string[] = tabs.map(({ id }) => id);
   const tabsLength: number = tabIds.length;
-  const [selectedTabId, updateSelectedTabId] = useState<string>(activeTab);
+  const [selectedTabId, updateSelectedTabId] = useState<string>(
+    activeTab || tabIds[0]
+  );
   const [selectedTabIndex, updateSelectedTabIndex] = useState<number>(
     tabIds.indexOf(selectedTabId)
   );
 
   const tabsRef = useRef<HTMLInputElement>(null);
-
-  const handleSelect = (newTabId: string): void => {
-    updateSelectedTabId(newTabId);
-  };
 
   const focusOnTab = (tabId: string): void => {
     tabsRef.current &&
@@ -32,6 +36,21 @@ export const TabGroup: FC<ItabGroup> = ({ label, tabs, activeTab }) => {
         `#${tabId}-tab`
       ) as HTMLInputElement).focus();
   };
+
+  const selectNewTab = (newTabId: string): void => {
+    newTabId && focusOnTab(newTabId);
+    onTabSelected && newTabId && onTabSelected(newTabId);
+  };
+
+  const handleSelect = (newTabId: string): void => {
+    updateSelectedTabId(newTabId);
+    selectNewTab(newTabId);
+  };
+
+  useEffect(() => {
+    activeTab && handleSelect(activeTab);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeTab]);
 
   const handleKeyboardNavigation = (
     event: KeyboardEvent<HTMLButtonElement>
@@ -48,6 +67,7 @@ export const TabGroup: FC<ItabGroup> = ({ label, tabs, activeTab }) => {
     }
     updateSelectedTabId(tabIds[tabIndex]);
     updateSelectedTabIndex(tabIndex);
+    selectNewTab(tabIds[tabIndex]);
   };
 
   const onTabKeyDown = (event: KeyboardEvent<HTMLDivElement>): void => {
@@ -88,11 +108,6 @@ export const TabGroup: FC<ItabGroup> = ({ label, tabs, activeTab }) => {
       activeTabPanel.removeAttribute('hidden');
     }
   };
-
-  useEffect(() => {
-    // focus on the programatically selected tab
-    selectedTabId && focusOnTab(selectedTabId);
-  }, [selectedTabId]);
 
   return (
     <>
