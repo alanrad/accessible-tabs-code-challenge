@@ -35,7 +35,7 @@ body {
 .list-header .title {
   font-size: 21px;
   color: #29aed6;
-  padding: 12px 0;
+  padding: 12px 0 0;
 }
 
 .list-item {
@@ -45,6 +45,7 @@ body {
 
 .list-item p {
   padding: 4px 0;
+  line-height: 1.5rem;
 }
 
 .list-item .title {
@@ -55,7 +56,8 @@ body {
 .list-wrapper a {
   display: flex;
   justify-content: flex-end;
-  padding: 20px 0 10px 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #29aed6;
   font-weight: bold;
@@ -84,4 +86,18 @@ body {
 
 .example-details p {
   line-height: 22px;
+}
+
+.example-title {
+  margin: 2rem 0;
+}
+
+a:visited {
+  color: #29aed6;
+}
+
+a[href] {
+  color: #29aed6;
+  text-decoration: none;
+  padding: 10px 0;
 }

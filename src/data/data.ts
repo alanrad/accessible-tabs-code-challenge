@@ -2,17 +2,16 @@ export const data = {
   appName: 'Accessible Tabs Code Challenge',
   examples: [
     {
-      id: 'tabs-width-automatic-activation',
-      title: 'Tabs With Automatic Activation',
-      description:
-        'A tabs widget where tabs are automatically activated and their panel is displayed when they receive focus.',
+      id: 'multiple-tab-groups',
+      title: 'Multiple Tab Groups',
+      description: 'Handle multiple tab groups rendered on a single page.',
       activeTab: 'react',
     },
     {
-      id: 'tabs-width-manual-activation',
-      title: 'Tabs With Manual Activation',
+      id: 'link-to-active-tab',
+      title: 'Link to Active Tab',
       description:
-        'A tabs widget where users activate a tab and display its panel by pressing Space or Enter.',
+        'Directly link to any given tab on a page, retain active tab state with back/forward browser navigation and refresh.',
       activeTab: 'react',
     },
   ],
