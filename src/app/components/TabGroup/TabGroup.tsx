@@ -1,10 +1,10 @@
 import React, { FC, KeyboardEvent, useState, useRef, useEffect } from 'react';
 // components
-import { Tab, TabPanel } from 'app/components';
+import { Tab, TabPanel } from 'app/components/TabGroup';
 // interfaces
 import { ItabContent } from 'app/interfaces';
 // styles
-import 'styles/tabgroup.css';
+import './tabgroup.css';
 
 interface ItabGroup {
   label: string;
