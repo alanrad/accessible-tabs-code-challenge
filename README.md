@@ -7,7 +7,7 @@ Web URL: [front-end-coding-test.web.app](https://front-end-coding-test.web.app)
 This application includes:
 
 - A set of tab group components fully compliant with the WAI ARIA specification
-- The tab lists are fully operational and tested in Chrome, Firefox, Safari and Edge
+- The tab lists are fully operational and tested in Chrome, Firefox and Edge
 - Home page lists examples of tab groups:
 
   - Tabs with "Automatic Activation" and handle multiple tab groups rendered on a single page
@@ -32,6 +32,10 @@ Run the app in the development mode ([http://localhost:3000](http://localhost:30
 Launch the test runner in the interactive watch mode:
 
 | `yarn test`
+
+Check test coverage:
+
+| `yarn test:coverage`
 
 Run linter:
 
@@ -68,12 +72,16 @@ Here is the list of [all activities on Git branches](https://github.com/alanrad/
 
 1. Added and configured linter tools and pre-commit hooks to produce reliable code and well-structured git commits (I follow AngulaJS commit message convention).
 2. Added Firebase deployment for quick hosting and release solution.
-3. I made the configuration app swappable to be able to deploy the same package to different dev environments.
+3. Made configuration swappable to be able to deploy the same package to different dev/test environments.
 
 ---
 
-### Outstanding work
+### Testing
 
-1. Appropriate unit and/or integration tests will be included soon.
-
-...
+- Used Jest as a test runner and primarily used function components.
+- Demonstrated testing patterns for React components:
+  - Setup
+  - act()
+  - Rendering
+  - Events
+  - Snapshot Testing
