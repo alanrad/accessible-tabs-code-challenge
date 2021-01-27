@@ -27,7 +27,7 @@ export const DemoSingleTabGroup: FC<IdisplayDetails> = ({
       <p className="title">{description}</p>
       <Link to={`/`}>{goBackLinkLabel}</Link>
       <section>
-        <h2 className="example-title">Tab Group One</h2>
+        <h2 className="example-title">Tab Group</h2>
         <div id="tab-1">
           <TabGroup
             label="JS Frameworks"
