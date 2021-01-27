@@ -44,7 +44,7 @@ body {
 }
 
 .list-item p {
-  padding: 4px 0;
+  padding: 10px 0;
   line-height: 1.5rem;
 }
 
@@ -71,6 +71,7 @@ body {
 }
 
 .example-details .title {
+  font-weight: bold;
   padding: 8px 0 12px;
 }
 
@@ -85,6 +86,7 @@ body {
 
 .example-details p {
   line-height: 22px;
+  margin-bottom: 20px;
 }
 
 .example-title {
