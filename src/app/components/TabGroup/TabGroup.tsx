@@ -3,6 +3,8 @@ import React, { FC, KeyboardEvent, useState, useRef, useEffect } from 'react';
 import { Tab, TabPanel } from 'app/components/TabGroup';
 // interfaces
 import { ItabContent } from 'app/interfaces';
+// constants
+import { TAB_ID_EXT, TAB_PANEL_ID_EXT } from './constants';
 // styles
 import './tabgroup.css';
 
@@ -33,7 +35,7 @@ export const TabGroup: FC<ItabGroup> = ({
   const focusOnTab = (tabId: string): void => {
     tabsRef.current &&
       (tabsRef.current.querySelector(
-        `#${tabId}-tab`
+        `#${tabId}-${TAB_ID_EXT}`
       ) as HTMLInputElement).focus();
   };
 
@@ -78,10 +80,10 @@ export const TabGroup: FC<ItabGroup> = ({
       const current = tabsRef.current;
       const parent = current.parentNode;
       const activeTab = tabsRef.current.querySelector(
-        `#${selectedTabId}-tab`
+        `#${selectedTabId}-${TAB_ID_EXT}`
       ) as HTMLInputElement;
       const activeTabPanel = tabsRef.current.querySelector(
-        `#${selectedTabId}-tabpanel`
+        `#${selectedTabId}-${TAB_PANEL_ID_EXT}`
       ) as HTMLInputElement;
 
       // Remove all current selected tabs

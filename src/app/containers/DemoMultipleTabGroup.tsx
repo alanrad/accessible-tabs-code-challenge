@@ -19,7 +19,7 @@ export const DemoMultipleTabGroup: FC<IdisplayDetails> = ({
 
   return (
     <div className="example-details">
-      <p className="title">{description}</p>
+      <p>{description}</p>
       <Link to={`/`}>{goBackLinkLabel}</Link>
       {multipleTabs.map((title, index) => (
         <section key={index}>
